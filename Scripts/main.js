@@ -20,14 +20,8 @@ var tag = function () {
 }();
 
 function call() {
-    var targetCal = function () {
-        var a = tag.v+"/"+tag.w+"/"+tag.x+" "+tag.y+":"+tag.z;
-        var b = a.match(/(\d{2})\/(\d{2})\/(\d{4}) (\d{2}):(\d{2})/); //dd/mm/yyyy hh:mm
-        return Date.UTC(+b[3], b[2]-1, +b[1], +b[4], +b[5]);
-    }();
-    
     var timeRem = function () {
-        var a = targetCal - (new Date).getTime();
+        var a =  Date.parse(tag.w+"/"+tag.v+"/"+tag.x+" "+tag.y+":"+tag.z+":00") - Date.parse(new Date());
         var b = Math.floor((a/1000)%60); //sec
         var c = Math.floor((a/1000/60)%60); //min
         var d = Math.floor((a/(1000*60*60))%24); //hour
@@ -71,7 +65,6 @@ function call() {
     setTimeout(call,1000);
 }
 
-var target = tag.w+"/"+tag.v+"/"+tag.x+" "+tag.y+":"+tag.z;
 call();
 document.getElementById("name").innerHTML = tag.nm;
-document.getElementById("target-readable").innerHTML = target;
+document.getElementById("target-readable").innerHTML = tag.w+"/"+tag.v+"/"+tag.x+" "+tag.y+":"+tag.z;
