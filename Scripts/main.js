@@ -42,7 +42,7 @@ function call() {
    var g = function () {
         if (timeRem[3] == 1) {
             return " Hour, ";
-        } else if (timeRem[3] <= 0) {
+        } else if (timeRem[3] <= 0 && timeRem[4] <= 0) {
             return "";
         } else {
             return " Hours, ";
@@ -52,7 +52,7 @@ function call() {
     var h = function () {
         if (timeRem[2] == 1) {
             return " Minute & ";
-        } else if (timeRem[2] <= 0) {
+        } else if (timeRem[2] <= 0 && timeRem[3] <=0 && timeRem[4] <= 0) {
             return "";
         } else {
             return " Minutes & ";
@@ -62,7 +62,7 @@ function call() {
     var i = function () {
         if (timeRem[1] == 1) {
             return " Second";
-        } else if (timeRem[1] <= 0) {
+        } else if (timeRem[1] <= 0 && timeRem[2] <= 0 && timeRem[3] <=0 && timeRem[4] <= 0) {
             return "Zero Time";
         } else {
             return " Seconds";
@@ -70,7 +70,7 @@ function call() {
     }();
     
     var j = function () {
-        if (timeRem[4] <= 0) {
+        if (timeRem[4] <= 0 ) {
             return "";
         } else {
             return timeRem[4];
@@ -78,7 +78,7 @@ function call() {
     }();
     
     var k = function () {
-        if (timeRem[3] <= 0) {
+        if (timeRem[3] <= 0 && timeRem[4] <= 0) {
             return "";
         } else {
             return timeRem[3];
@@ -86,7 +86,7 @@ function call() {
     }();
     
     var l = function () {
-        if (timeRem[2] <= 0) {
+        if (timeRem[2] <= 0 && timeRem[3] <=0 && timeRem[4] <= 0) {
             return "";
         } else {
             return timeRem[2];
@@ -94,7 +94,7 @@ function call() {
     }();
     
     var m = function () {
-        if (timeRem[1] <= 0) {
+        if (timeRem[1] <= 0 && timeRem[2] <= 0 && timeRem[3] <=0 && timeRem[4] <= 0) {
             return "";
         } else {
             return timeRem[1];
