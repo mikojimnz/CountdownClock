@@ -32,6 +32,8 @@ function call() {
     var f = function () {
         if (timeRem[4] == 1) {
             return " Day, ";
+        } else if (timeRem[4] <= 0) {
+            return "";
         } else {
             return " Days, ";
         }
@@ -40,6 +42,8 @@ function call() {
    var g = function () {
         if (timeRem[3] == 1) {
             return " Hour, ";
+        } else if (timeRem[3] <= 0) {
+            return "";
         } else {
             return " Hours, ";
         }
@@ -48,6 +52,8 @@ function call() {
     var h = function () {
         if (timeRem[2] == 1) {
             return " Minute & ";
+        } else if (timeRem[2] <= 0) {
+            return "";
         } else {
             return " Minutes & ";
         }
@@ -56,12 +62,46 @@ function call() {
     var i = function () {
         if (timeRem[1] == 1) {
             return " Second";
+        } else if (timeRem[1] <= 0) {
+            return "Zero Time";
         } else {
             return " Seconds";
         }
     }();
     
-    document.getElementById("time").innerHTML = timeRem[4]+f+timeRem[3]+g+timeRem[2]+h+timeRem[1]+i;
+    var j = function () {
+        if (timeRem[4] <= 0) {
+            return "";
+        } else {
+            return timeRem[4];
+        }
+    }();
+    
+    var k = function () {
+        if (timeRem[3] <= 0) {
+            return "";
+        } else {
+            return timeRem[3];
+        }
+    }();
+    
+    var l = function () {
+        if (timeRem[2] <= 0) {
+            return "";
+        } else {
+            return timeRem[2];
+        }
+    }();
+    
+    var m = function () {
+        if (timeRem[1] <= 0) {
+            return "";
+        } else {
+            return timeRem[1];
+        }
+    }();
+    
+    document.getElementById("time").innerHTML = j+f+k+g+l+h+m+i;
     setTimeout(call,1000);
 }
 
