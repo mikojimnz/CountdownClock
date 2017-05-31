@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <title>Countdown</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Miko">
-    </head>
-    <style>
-        html * {
-            font-size: 40px;
-            color: #000000;
-            font-family: "Helvetica";
-        }
-        
-        #name {
-            font-size: 40px;
-            font-weight: bold;
-        }
-        
-        #target-readable {
-            font-size: 18px;
-            font-weight: lighter;
-        }
-        
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-    </style>
-    <body>
-        <div class="container" style="text-align: center">
-            <p id="time"></p>
-            <p>Remaining Until</p>
-            <p id="name">/Undefined/</p>
-            <p id="target-readable">/Undefined/</p>
-        </div>
-        <script type="text/javascript" src="Scripts/main.js"></script>
-    </body>
+
+<head>
+    <title>Countdown</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Miko">
+</head>
+<style>
+    html * {
+        font-size: 40px;
+        color: #000000;
+        font-family: "Helvetica";
+    }
+    
+    #name {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    #target-readable {
+        font-size: 18px;
+        font-weight: lighter;
+    }
+    
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+</style>
+
+<body>
+    <div class="container" style="text-align: center">
+        <p id="time"></p>
+        <p>Remaining Until</p>
+        <p id="name">/Undefined/</p>
+        <p id="target-readable">/Undefined/</p>
+    </div>
+    <script type="text/javascript" src="Scripts/main.js"></script>
+</body>
+
 </html>
