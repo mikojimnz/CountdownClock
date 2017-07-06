@@ -1,0 +1,37 @@
+@media all and (orientation:landscape) {
+    html * {
+        font-size: 5vh;
+        color: #000000;
+        font-family: "Helvetica";
+    }
+    #name {
+        font-weight: bold;
+    }
+    #date {
+        font-size: 2vh;
+        font-weight: lighter;
+    }
+    .container {
+        text-align: center;
+        margin-top: 15%;
+    }
+}
+
+@media all and (orientation:portrait) {
+    html * {
+        font-size: 4vw;
+        color: #000000;
+        font-family: "Helvetica";
+    }
+    #name {
+        font-weight: bold;
+    }
+    #date {
+        font-size: 2vw;
+        font-weight: lighter;
+    }
+    .container {
+        text-align: center;
+        margin-top: 15%;
+    }
+}

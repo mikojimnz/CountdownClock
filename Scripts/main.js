@@ -107,4 +107,4 @@ function call() {
 
 call();
 document.getElementById("name").innerHTML = tag.nm;
-document.getElementById("target-readable").innerHTML = tag.w + "/" + tag.v + "/" + tag.x + " " + tag.y + ":" + tag.z;
+document.getElementById("date").innerHTML = tag.w + "/" + tag.v + "/" + tag.x + " " + tag.y + ":" + tag.z;
